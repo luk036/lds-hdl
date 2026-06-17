@@ -1,0 +1,302 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\scoop\apps\iverilog\current\lib\ivl\system.vpi";
+:vpi_module "D:\scoop\apps\iverilog\current\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\scoop\apps\iverilog\current\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\scoop\apps\iverilog\current\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\scoop\apps\iverilog\current\lib\ivl\va_math.vpi";
+:vpi_module "D:\scoop\apps\iverilog\current\lib\ivl\v2009.vpi";
+S_0000028884305340 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000028884304740 .scope module, "tb_dbg" "tb_dbg" 3 1;
+ .timescale 0 0;
+v000002888436afc0_0 .var "clk", 0 0;
+v000002888436ab60_0 .var "en", 0 0;
+v000002888436aa20_0 .net "out", 15 0, v000002888436af20_0;  1 drivers
+v000002888436aac0_0 .var "rst_n", 0 0;
+v000002888436ade0_0 .net "valid", 0 0, v000002888436b7e0_0;  1 drivers
+S_0000028884304ca0 .scope module, "dut" "vdc_3_divmod" 3 5, 4 1 0, S_0000028884304740;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst_n";
+    .port_info 2 /INPUT 1 "en";
+    .port_info 3 /OUTPUT 16 "vdc_out";
+    .port_info 4 /OUTPUT 1 "valid";
+v000002888436b100_0 .var "accum", 15 0;
+v000002888436b1a0_0 .var "busy", 0 0;
+v000002888436b240_0 .net "clk", 0 0, v000002888436afc0_0;  1 drivers
+v000002888436b560_0 .var "cnt", 15 0;
+v000002888436b740_0 .net "en", 0 0, v000002888436ab60_0;  1 drivers
+v000002888436b2e0_0 .var "idx", 3 0;
+v000002888436a8e0_0 .net "rst_n", 0 0, v000002888436aac0_0;  1 drivers
+v000002888436b7e0_0 .var "valid", 0 0;
+v000002888436af20_0 .var "vdc_out", 15 0;
+L_000002888436b8a8 .functor BUFT 1, C4<0101010101010101>, C4<0>, C4<0>, C4<0>;
+v000002888436a980 .array "weight", 9 0;
+v000002888436a980_0 .net v000002888436a980 0, 15 0, L_000002888436b8a8; 1 drivers
+L_000002888436b8f0 .functor BUFT 1, C4<0001110001110010>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_1 .net v000002888436a980 1, 15 0, L_000002888436b8f0; 1 drivers
+L_000002888436b938 .functor BUFT 1, C4<0000100101111011>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_2 .net v000002888436a980 2, 15 0, L_000002888436b938; 1 drivers
+L_000002888436b980 .functor BUFT 1, C4<0000001100101001>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_3 .net v000002888436a980 3, 15 0, L_000002888436b980; 1 drivers
+L_000002888436b9c8 .functor BUFT 1, C4<0000000100001110>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_4 .net v000002888436a980 4, 15 0, L_000002888436b9c8; 1 drivers
+L_000002888436ba10 .functor BUFT 1, C4<0000000001011010>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_5 .net v000002888436a980 5, 15 0, L_000002888436ba10; 1 drivers
+L_000002888436ba58 .functor BUFT 1, C4<0000000000011110>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_6 .net v000002888436a980 6, 15 0, L_000002888436ba58; 1 drivers
+L_000002888436baa0 .functor BUFT 1, C4<0000000000001010>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_7 .net v000002888436a980 7, 15 0, L_000002888436baa0; 1 drivers
+L_000002888436bae8 .functor BUFT 1, C4<0000000000000011>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_8 .net v000002888436a980 8, 15 0, L_000002888436bae8; 1 drivers
+L_000002888436bb30 .functor BUFT 1, C4<0000000000000001>, C4<0>, C4<0>, C4<0>;
+v000002888436a980_9 .net v000002888436a980 9, 15 0, L_000002888436bb30; 1 drivers
+v000002888436b600_0 .var "work", 15 0;
+E_0000028884301740/0 .event negedge, v000002888436a8e0_0;
+E_0000028884301740/1 .event posedge, v000002888436b240_0;
+E_0000028884301740 .event/or E_0000028884301740/0, E_0000028884301740/1;
+S_0000028884304e30 .scope function.vec4.s16, "div3" "div3" 4 35, 4 35 0, S_0000028884304ca0;
+ .timescale 0 0;
+; Variable div3 is vec4 return value of scope S_0000028884304e30
+v0000028884303620_0 .var "x", 15 0;
+TD_tb_dbg.dut.div3 ;
+    %pushi/vec4 0, 0, 16;
+    %ret/vec4 0, 0, 16;  Assign to div3 (store_vec4_to_lval)
+    %end;
+S_00000288842d6740 .scope function.vec4.s2, "mod3" "mod3" 4 21, 4 21 0, S_0000028884304ca0;
+ .timescale 0 0;
+; Variable mod3 is vec4 return value of scope S_00000288842d6740
+v00000288842d68d0_0 .var "s", 17 0;
+v00000288842d6970_0 .var "x", 15 0;
+TD_tb_dbg.dut.mod3 ;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d6970_0;
+    %parti/s 2, 0, 2;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d6970_0;
+    %parti/s 2, 2, 3;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d6970_0;
+    %parti/s 2, 4, 4;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d6970_0;
+    %parti/s 2, 6, 4;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d6970_0;
+    %parti/s 2, 8, 5;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d6970_0;
+    %parti/s 2, 10, 5;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d6970_0;
+    %parti/s 2, 12, 5;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d6970_0;
+    %parti/s 2, 14, 5;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %store/vec4 v00000288842d68d0_0, 0, 18;
+    %load/vec4 v00000288842d68d0_0;
+    %parti/s 2, 0, 2;
+    %pad/u 18;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d68d0_0;
+    %parti/s 3, 2, 3;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %store/vec4 v00000288842d68d0_0, 0, 18;
+    %load/vec4 v00000288842d68d0_0;
+    %parti/s 2, 0, 2;
+    %pad/u 18;
+    %pushi/vec4 0, 0, 2;
+    %load/vec4 v00000288842d68d0_0;
+    %parti/s 3, 2, 3;
+    %concat/vec4; draw_concat_vec4
+    %pad/u 18;
+    %add;
+    %store/vec4 v00000288842d68d0_0, 0, 18;
+    %load/vec4 v00000288842d68d0_0;
+    %pad/u 32;
+    %cmpi/u 3, 0, 32;
+    %flag_inv 5; GE is !LT
+    %jmp/0xz  T_1.0, 5;
+    %load/vec4 v00000288842d68d0_0;
+    %subi 3, 0, 18;
+    %store/vec4 v00000288842d68d0_0, 0, 18;
+T_1.0 ;
+    %load/vec4 v00000288842d68d0_0;
+    %parti/s 2, 0, 2;
+    %ret/vec4 0, 0, 2;  Assign to mod3 (store_vec4_to_lval)
+    %end;
+    .scope S_0000028884304ca0;
+T_2 ;
+    %wait E_0000028884301740;
+    %load/vec4 v000002888436a8e0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v000002888436b560_0, 0;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v000002888436af20_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000002888436b7e0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000002888436b1a0_0, 0;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v000002888436b600_0, 0;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v000002888436b100_0, 0;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v000002888436b2e0_0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/vec4 v000002888436b1a0_0;
+    %nor/r;
+    %flag_set/vec4 9;
+    %flag_get/vec4 9;
+    %jmp/0 T_2.4, 9;
+    %load/vec4 v000002888436b740_0;
+    %and;
+T_2.4;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.2, 8;
+    %load/vec4 v000002888436b560_0;
+    %addi 1, 0, 16;
+    %assign/vec4 v000002888436b560_0, 0;
+    %load/vec4 v000002888436b560_0;
+    %addi 1, 0, 16;
+    %assign/vec4 v000002888436b600_0, 0;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v000002888436b100_0, 0;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v000002888436b2e0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v000002888436b1a0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000002888436b7e0_0, 0;
+    %jmp T_2.3;
+T_2.2 ;
+    %load/vec4 v000002888436b1a0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.5, 8;
+    %load/vec4 v000002888436b600_0;
+    %cmpi/e 0, 0, 16;
+    %jmp/1 T_2.9, 4;
+    %flag_mov 8, 4;
+    %load/vec4 v000002888436b2e0_0;
+    %cmpi/u 9, 0, 4;
+    %flag_or 5, 4; GT is !LE
+    %flag_inv 5;
+    %flag_or 5, 8;
+    %flag_mov 4, 5;
+T_2.9;
+    %jmp/0xz  T_2.7, 4;
+    %load/vec4 v000002888436b100_0;
+    %assign/vec4 v000002888436af20_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000002888436b1a0_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v000002888436b7e0_0, 0;
+    %jmp T_2.8;
+T_2.7 ;
+    %load/vec4 v000002888436b100_0;
+    %load/vec4 v000002888436b600_0;
+    %store/vec4 v00000288842d6970_0, 0, 16;
+    %callf/vec4 TD_tb_dbg.dut.mod3, S_00000288842d6740;
+    %pad/u 16;
+    %load/vec4 v000002888436b2e0_0;
+    %pad/u 5;
+    %ix/vec4 4;
+    %load/vec4a v000002888436a980, 4;
+    %mul;
+    %add;
+    %assign/vec4 v000002888436b100_0, 0;
+    %load/vec4 v000002888436b600_0;
+    %store/vec4 v0000028884303620_0, 0, 16;
+    %callf/vec4 TD_tb_dbg.dut.div3, S_0000028884304e30;
+    %assign/vec4 v000002888436b600_0, 0;
+    %load/vec4 v000002888436b2e0_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v000002888436b2e0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000002888436b7e0_0, 0;
+T_2.8 ;
+    %jmp T_2.6;
+T_2.5 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000002888436b7e0_0, 0;
+T_2.6 ;
+T_2.3 ;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0000028884304740;
+T_3 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002888436afc0_0, 0, 1;
+    %end;
+    .thread T_3;
+    .scope S_0000028884304740;
+T_4 ;
+    %delay 50, 0;
+    %load/vec4 v000002888436afc0_0;
+    %inv;
+    %store/vec4 v000002888436afc0_0, 0, 1;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_0000028884304740;
+T_5 ;
+    %vpi_call/w 3 9 "$display", "Starting debug at %0t", $time {0 0 0};
+    %vpi_call/w 3 10 "$monitor", "[%0t] rst_n=%b en=%b busy=%b valid=%b work=%0d idx=%0d cnt=%0d accum=%0d", $time, v000002888436aac0_0, v000002888436ab60_0, v000002888436b1a0_0, v000002888436ade0_0, v000002888436b600_0, v000002888436b2e0_0, v000002888436b560_0, v000002888436b100_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002888436aac0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002888436ab60_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002888436aac0_0, 0, 1;
+    %delay 10, 0;
+    %delay 40, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002888436ab60_0, 0, 1;
+    %delay 30, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002888436ab60_0, 0, 1;
+    %delay 500, 0;
+    %vpi_call/w 3 20 "$display", "Final: valid=%b out=0x%04X", v000002888436ade0_0, v000002888436aa20_0 {0 0 0};
+    %vpi_call/w 3 21 "$finish" {0 0 0};
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "dbg_tb.v";
+    "../rtl/vdc_3_divmod.v";
