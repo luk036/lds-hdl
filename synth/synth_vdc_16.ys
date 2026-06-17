@@ -1,0 +1,46 @@
+# -------------------------------------------------------------------------
+# synth_vdc_16.ys — Yosys synthesis script for vdc_16
+# -------------------------------------------------------------------------
+# Library:  tutorial_tech.lib  (Yosys-derived, Liberty format)
+# Top:      vdc_16
+# Outputs:  vdc_16_synth.v         (mapped to Yosys internal $_* cells)
+#           vdc_16_synth_lib.v     (mapped to tutorial_tech.lib cells)
+# Reports:  vdc_16_area.rpt
+#           vdc_16_lib_area.rpt
+# -------------------------------------------------------------------------
+
+# ----- 1. Read technology library ----------------------------------------
+read_liberty -lib ../tutorial_tech.lib
+
+# ----- 2. Read RTL design ------------------------------------------------
+read_verilog ../rtl/vdc_16.v
+
+# ----- 3. Elaborate & coarse synthesis -----------------------------------
+hierarchy -top vdc_16
+synth -top vdc_16
+
+# ----- 4. Statistics (internal cells) ------------------------------------
+tee -o vdc_16_area.rpt stat
+
+# ----- 5. Write internal-cell netlist ------------------------------------
+write_verilog vdc_16_synth.v
+
+# ----- 6. Try DFF mapping ------------------------------------------------
+# NOTE: The library has _dollar__DFF_P_ and _dollar__DFF_N_ without async
+# reset. Our design uses async-reset DFFs. dfflibmap may split reset into
+# a MUX + plain DFF if the library lacks async-reset flops.
+dfflibmap -liberty ../tutorial_tech.lib
+
+# ----- 7. Try ABC combinational mapping ----------------------------------
+# NOTE: The library's _dollar__NOT_ cell has function "(A)" (buffer) instead
+# of "(!A)" (inverter).  If ABC cannot find an inverter, mapping will fail.
+# We use a custom script with the legacy "map" command (not ABC9 &nf).
+abc -liberty ../tutorial_tech.lib \
+    -script "+strash; ifraig; scorr; dc2; dretime; retime; strash; map; write_blif %{output}.blif"
+
+# ----- 8. Post-mapping cleanup -------------------------------------------
+opt_clean -purge
+
+# ----- 9. Library-mapped stats & netlist ----------------------------------
+tee -o vdc_16_lib_area.rpt stat -liberty ../tutorial_tech.lib
+write_verilog vdc_16_synth_lib.v

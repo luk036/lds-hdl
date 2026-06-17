@@ -1,0 +1,7 @@
+read_liberty -lib ../tutorial_tech.lib
+read_verilog ../rtl/vdc_3_ilds.v
+hierarchy -top vdc_3_ilds
+synth -top vdc_3_ilds
+tee -o vdc_3_ilds_area.rpt stat
+write_verilog vdc_3_ilds_synth.v
+write_json vdc_3_ilds_synth.json

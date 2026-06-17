@@ -1,0 +1,17 @@
+# Build outputs
+sim/build/
+sim/*.exe
+
+# Simulation waveforms
+*.vcd
+
+# Yosys temporaries
+synth/*.rpt
+synth/*.json
+synth/*_synth.v
+synth/abc.history
+synth/help.ys
+
+# Python cache
+__pycache__/
+*.pyc
