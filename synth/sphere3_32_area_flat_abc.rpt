@@ -1,0 +1,19 @@
+
+16. Printing statistics.
+
+=== sphere3_32 ===
+
+   Number of wires:             157962
+   Number of wire bits:         159214
+   Number of public wires:          65
+   Number of public wire bits:    1162
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:             159111
+     $_DFF_PN0_                    961
+     $_DFF_PN1_                      2
+     _dollar__AND_               54639
+     _dollar__MUX_               24642
+     _dollar__NOT_               78867
+

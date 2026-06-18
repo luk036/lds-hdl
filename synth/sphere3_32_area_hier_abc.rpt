@@ -1,0 +1,160 @@
+
+15. Printing statistics.
+
+=== circle_3_32 ===
+
+   Number of wires:               2462
+   Number of wire bits:           2586
+   Number of public wires:           9
+   Number of public wire bits:     133
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2487
+     _dollar__AND_                 921
+     _dollar__MUX_                 323
+     _dollar__NOT_                1241
+     cordic_32                       1
+     vdc_3_ilds_32                   1
+
+=== cordic_32 ===
+
+   Number of wires:               6235
+   Number of wire bits:           6592
+   Number of public wires:          14
+   Number of public wire bits:     208
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6557
+     $_DFF_PN0_                    173
+     _dollar__AND_                1602
+     _dollar__MUX_                1539
+     _dollar__NOT_                3243
+
+=== cordic_sqrt_32 ===
+
+   Number of wires:              13886
+   Number of wire bits:          14254
+   Number of public wires:          13
+   Number of public wire bits:     246
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              14151
+     $_DFF_PN0_                    143
+     _dollar__AND_                4344
+     _dollar__MUX_                2693
+     _dollar__NOT_                6971
+
+=== sphere3_32 ===
+
+   Number of wires:              70256
+   Number of wire bits:          70878
+   Number of public wires:          25
+   Number of public wire bits:     492
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              70682
+     $_DFF_PN0_                    165
+     $_DFF_PN1_                      1
+     _dollar__AND_               23903
+     _dollar__MUX_               11523
+     _dollar__NOT_               35087
+     cordic_32                       1
+     sphere_32                       1
+     vdc_7_ilds_32                   1
+
+=== sphere_32 ===
+
+   Number of wires:              45745
+   Number of wire bits:          45995
+   Number of public wires:          18
+   Number of public wire bits:     268
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              45864
+     $_DFF_PN0_                      5
+     $_DFF_PN1_                      1
+     _dollar__AND_               17839
+     _dollar__BUF_                  31
+     _dollar__MUX_                5096
+     _dollar__NOT_               22889
+     circle_3_32                     1
+     cordic_sqrt_32                  1
+     vdc_32                          1
+
+=== vdc_32 ===
+
+   Number of wires:                186
+   Number of wire bits:            248
+   Number of public wires:           5
+   Number of public wire bits:      36
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                245
+     $_DFF_PN0_                     33
+     _dollar__AND_                  87
+     _dollar__MUX_                  28
+     _dollar__NOT_                  97
+
+=== vdc_3_ilds_32 ===
+
+   Number of wires:               6573
+   Number of wire bits:           6829
+   Number of public wires:          10
+   Number of public wire bits:     138
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6826
+     $_DFF_PN0_                    135
+     _dollar__AND_                2327
+     _dollar__MUX_                 999
+     _dollar__NOT_                3365
+
+=== vdc_7_ilds_32 ===
+
+   Number of wires:               6091
+   Number of wire bits:           6345
+   Number of public wires:          10
+   Number of public wire bits:     137
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6342
+     $_DFF_PN0_                    134
+     _dollar__AND_                2116
+     _dollar__MUX_                 963
+     _dollar__NOT_                3129
+
+=== design hierarchy ===
+
+   sphere3_32                        1
+     cordic_32                       1
+     sphere_32                       1
+       circle_3_32                   1
+         cordic_32                   1
+         vdc_3_ilds_32               1
+       cordic_sqrt_32                1
+       vdc_32                        1
+     vdc_7_ilds_32                   1
+
+   Number of wires:             157669
+   Number of wire bits:         160319
+   Number of public wires:         118
+   Number of public wire bits:    1866
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:             159703
+     $_DFF_PN0_                    961
+     $_DFF_PN1_                      2
+     _dollar__AND_               54741
+     _dollar__BUF_                  31
+     _dollar__MUX_               24703
+     _dollar__NOT_               79265
+
