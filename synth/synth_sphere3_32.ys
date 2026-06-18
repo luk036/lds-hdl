@@ -9,6 +9,8 @@ read_verilog ../rtl/cordic_32.v
 read_verilog ../rtl/cordic_sqrt_32.v
 hierarchy -top sphere3_32
 synth -top sphere3_32
+flatten -wb
+clean
 tee -o sphere3_32_area.rpt stat
 write_verilog sphere3_32_synth.v
 write_json sphere3_32_synth.json
