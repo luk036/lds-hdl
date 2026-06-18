@@ -1,0 +1,14 @@
+read_liberty -lib ../tutorial_tech.lib
+read_verilog ../rtl/sphere3_32.v
+read_verilog ../rtl/vdc_7_ilds_32.v
+read_verilog ../rtl/sphere_32.v
+read_verilog ../rtl/vdc_32.v
+read_verilog ../rtl/circle_3_32.v
+read_verilog ../rtl/vdc_3_ilds_32.v
+read_verilog ../rtl/cordic_32.v
+read_verilog ../rtl/cordic_sqrt_32.v
+hierarchy -top sphere3_32
+synth -top sphere3_32
+tee -o sphere3_32_area.rpt stat
+write_verilog sphere3_32_synth.v
+write_json sphere3_32_synth.json

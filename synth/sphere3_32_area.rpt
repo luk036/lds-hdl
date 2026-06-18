@@ -1,0 +1,241 @@
+
+12. Printing statistics.
+
+=== circle_3_32 ===
+
+   Number of wires:                964
+   Number of wire bits:           1088
+   Number of public wires:           9
+   Number of public wire bits:     133
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                989
+     $_ANDNOT_                      74
+     $_AND_                         23
+     $_AOI3_                        85
+     $_NAND_                        13
+     $_NOR_                        171
+     $_NOT_                         65
+     $_OAI3_                        30
+     $_ORNOT_                       76
+     $_OR_                          31
+     $_XNOR_                       338
+     $_XOR_                         81
+     cordic_32                       1
+     vdc_3_ilds_32                   1
+
+=== cordic_32 ===
+
+   Number of wires:               2667
+   Number of wire bits:           3985
+   Number of public wires:          45
+   Number of public wire bits:    1200
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2958
+     $_ANDNOT_                     231
+     $_AND_                         26
+     $_AOI3_                       138
+     $_DFF_PN0_                    173
+     $_MUX_                       1025
+     $_NAND_                        42
+     $_NOR_                        249
+     $_NOT_                        171
+     $_OAI3_                       131
+     $_ORNOT_                      198
+     $_OR_                         100
+     $_XNOR_                       392
+     $_XOR_                         82
+
+=== cordic_sqrt_32 ===
+
+   Number of wires:               5436
+   Number of wire bits:           5884
+   Number of public wires:          33
+   Number of public wire bits:     346
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5681
+     $_ANDNOT_                     378
+     $_AND_                        147
+     $_AOI3_                       387
+     $_DFF_PN0_                    143
+     $_MUX_                       1287
+     $_NAND_                       117
+     $_NOR_                        847
+     $_NOT_                        296
+     $_OAI3_                       157
+     $_ORNOT_                      265
+     $_OR_                          58
+     $_XNOR_                      1220
+     $_XOR_                        379
+
+=== sphere3_32 ===
+
+   Number of wires:              29151
+   Number of wire bits:          38255
+   Number of public wires:         295
+   Number of public wire bits:    9244
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              29308
+     $_ANDNOT_                    1638
+     $_AND_                        292
+     $_AOI3_                      1615
+     $_DFF_PN0_                    165
+     $_DFF_PN1_                      1
+     $_MUX_                       2172
+     $_NAND_                        94
+     $_NOR_                      11650
+     $_NOT_                       1583
+     $_OAI3_                       249
+     $_OAI4_                         1
+     $_ORNOT_                      467
+     $_OR_                         518
+     $_XNOR_                      7717
+     $_XOR_                       1143
+     cordic_32                       1
+     sphere_32                       1
+     vdc_7_ilds_32                   1
+
+=== sphere_32 ===
+
+   Number of wires:              18349
+   Number of wire bits:          18756
+   Number of public wires:          21
+   Number of public wire bits:     428
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              18461
+     $_ANDNOT_                     922
+     $_AND_                       2194
+     $_AOI3_                       944
+     $_DFF_PN0_                      5
+     $_DFF_PN1_                      1
+     $_MUX_                         39
+     $_NAND_                        29
+     $_NOR_                       6401
+     $_NOT_                        975
+     $_OAI3_                       231
+     $_OAI4_                         1
+     $_ORNOT_                      239
+     $_OR_                         206
+     $_XNOR_                      5475
+     $_XOR_                        796
+     circle_3_32                     1
+     cordic_sqrt_32                  1
+     vdc_32                          1
+
+=== vdc_32 ===
+
+   Number of wires:                 94
+   Number of wire bits:            187
+   Number of public wires:           6
+   Number of public wire bits:      68
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                152
+     $_AND_                          4
+     $_DFF_PN0_                     33
+     $_MUX_                         31
+     $_NAND_                        17
+     $_NOR_                          6
+     $_ORNOT_                       23
+     $_OR_                           6
+     $_XNOR_                        28
+     $_XOR_                          4
+
+=== vdc_3_ilds_32 ===
+
+   Number of wires:               2894
+   Number of wire bits:           3770
+   Number of public wires:          30
+   Number of public wire bits:     778
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3127
+     $_ANDNOT_                     225
+     $_AND_                         59
+     $_AOI3_                       121
+     $_DFF_PN0_                    135
+     $_MUX_                        241
+     $_NAND_                        37
+     $_NOR_                        825
+     $_NOT_                        231
+     $_OAI3_                       109
+     $_OAI4_                         1
+     $_ORNOT_                      182
+     $_OR_                          68
+     $_XNOR_                       720
+     $_XOR_                        173
+
+=== vdc_7_ilds_32 ===
+
+   Number of wires:               2645
+   Number of wire bits:           3240
+   Number of public wires:          21
+   Number of public wire bits:     489
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2885
+     $_ANDNOT_                     251
+     $_AND_                         49
+     $_AOI3_                       116
+     $_AOI4_                         1
+     $_DFF_PN0_                    134
+     $_MUX_                        239
+     $_NAND_                        36
+     $_NOR_                        779
+     $_NOT_                        210
+     $_OAI3_                        92
+     $_OAI4_                         1
+     $_ORNOT_                      107
+     $_OR_                          46
+     $_XNOR_                       649
+     $_XOR_                        175
+
+=== design hierarchy ===
+
+   sphere3_32                        1
+     cordic_32                       1
+     sphere_32                       1
+       circle_3_32                   1
+         cordic_32                   1
+         vdc_3_ilds_32               1
+       cordic_sqrt_32                1
+       vdc_32                        1
+     vdc_7_ilds_32                   1
+
+   Number of wires:              64867
+   Number of wire bits:          79150
+   Number of public wires:         505
+   Number of public wire bits:   13886
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              66511
+     $_ANDNOT_                    3950
+     $_AND_                       2820
+     $_AOI3_                      3544
+     $_AOI4_                         1
+     $_DFF_PN0_                    961
+     $_DFF_PN1_                      2
+     $_MUX_                       6059
+     $_NAND_                       427
+     $_NOR_                      21177
+     $_NOT_                       3702
+     $_OAI3_                      1130
+     $_OAI4_                         4
+     $_ORNOT_                     1755
+     $_OR_                        1133
+     $_XNOR_                     16931
+     $_XOR_                       2915
+

@@ -49,6 +49,13 @@ MODULES = {
                            "vdc_3_ilds_32.v", "cordic_32.v", "cordic_sqrt_32.v"]],
         "test_sphere_32",
     ),
+    "sphere3_32": (
+        "sphere3_32",
+        [RTL / f for f in ["sphere3_32.v", "vdc_7_ilds_32.v", "sphere_32.v",
+                           "vdc_32.v", "circle_3_32.v", "vdc_3_ilds_32.v",
+                           "cordic_32.v", "cordic_sqrt_32.v"]],
+        "test_sphere3_32",
+    ),
 }
 
 

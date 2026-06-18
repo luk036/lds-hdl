@@ -1,0 +1,6 @@
+read_liberty -lib ../tutorial_tech.lib
+read_verilog ../rtl/cordic_32.v
+hierarchy -top cordic_32
+synth -top cordic_32
+abc -liberty ../tutorial_tech.lib
+stat -liberty ../tutorial_tech.lib
