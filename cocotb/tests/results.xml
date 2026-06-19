@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1781770806" />
+    <testcase name="test_sphere3_32" classname="test_sphere3_32" file="D:\github\cpp\lds-hdl\cocotb\tests\test_sphere3_32.py" lineno="6" time="0.27551770210266113" sim_time_ns="4230000000000" ratio_time="15352915503134.72" />
+  </testsuite>
+</testsuites>
